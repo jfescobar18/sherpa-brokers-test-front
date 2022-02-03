@@ -1,0 +1,11 @@
+version: '3.2'
+
+services:
+  seller:
+    build: ./
+    volumes:
+      - .:/usr/src/
+      - /usr/src/node_modules/
+    command: npx nodemon --legacy-watch index.jsx -e js,css
+    ports:
+      - 3000:3000
